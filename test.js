@@ -35,33 +35,12 @@ async function w(){
         console.log
         //console.log(JSON.stringify(abi));
         //var UniswapPairFactoryContract = await contract('0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f');
-        //var DaiPrizePoolContract= await contract(DaiPrizePoolAddress);
+        
         //var uniswapContract= await contract('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D');
         //var UniswapSwapDepositContract = await contract('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D');
         var DAIContract = await contract(DAI);
         console.log(await DAIContract.methods.balanceOf(account).send({from:account,gas:100000}))
-        /*
-        var WethDai = [WETH,DAI];
-        
-        console.log(await web3.eth.getBalance(account))
-        console.log(await web3.eth.Contract.defaultBlock)
-        console.log(await DaiPrizePoolContract.defaultBlock)
-        var encodedABIMethod = await DaiPrizePoolContract.methods.accountedBalance().encodeABI()
-        var w = await web3.eth.call({
-            to: DaiPrizePoolAddress, // contract address
-            data: encodedABIMethod
-        })
-        console.log(web3.utils.hexToAscii(w))
-        //console.log(JSON.stringify(Object.keys(await UniswapSwapDepositContract.methods),null,2))
-        //await UniswapSwapDepositContract.methods.swapExactETHForTokensSupportingFeeOnTransferTokens(10000000,WethDai,account,2532858215000).send({from: account});
-       //var w = await UniswapSwapDepositContract.methods.WETH().call();
-       //UniswapSwapDepositContract.defaultCommon.then(console.log);
-        //console.log(JSON.stringify(w,null,2))
-        //console.log(poolTogetherContract.options.jsonInterface)
        
-        await DaiPrizePoolContract.methods.accountedBalance().call({from:account}).then(console.log);
-
-        */
 
 
     } catch (e) {
