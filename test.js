@@ -1,10 +1,8 @@
-
-
 async function contract(address){
         var Web3 = require('web3');
 
         var web3 = new Web3('http://localhost:8545');
-        var etherscan = require('etherscan-api').init('2CFWJBPPQN3QXRGIBGRH9I6Z6Z6JYFQQ64');
+        var etherscan = require('etherscan-api').init('');
         var abi = await etherscan.contract.getabi(address);
         abi =JSON.parse(Object.values(abi)[2]);
         console.log(JSON.stringify(abi))
@@ -12,10 +10,12 @@ async function contract(address){
 }
 /*
 async function contract(address){
-    var ethers = require('ethers');
+    var ethers = 
+
+require('ethers');
     const localhost = new ethers.providers.JsonRpcProvider();
     
-    var etherscan = require('etherscan-api').init('2CFWJBPPQN3QXRGIBGRH9I6Z6Z6JYFQQ64');
+    var etherscan = require('etherscan-api').init('');
     var abi = await etherscan.contract.getabi(address);
     abi =JSON.parse(Object.values(abi)[2]);
     console.log(await localhost.getBlockNumber())
